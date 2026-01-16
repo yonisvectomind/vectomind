@@ -1,0 +1,68 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#050505"/>
+  
+  <!-- Grid overlay -->
+  <g opacity="0.1">
+    <line x1="0" y1="157.5" x2="1200" y2="157.5" stroke="#00ff41" stroke-width="1"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#00ff41" stroke-width="1"/>
+    <line x1="0" y1="472.5" x2="1200" y2="472.5" stroke="#00ff41" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#00ff41" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#00ff41" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#00ff41" stroke-width="1"/>
+  </g>
+  
+  <!-- Top border accent -->
+  <rect x="0" y="0" width="1200" height="4" fill="#00ff41"/>
+  
+  <!-- Classification header -->
+  <text x="80" y="100" fill="#00ff41" font-family="'Courier New', monospace" font-size="22" letter-spacing="8">
+    [AUDIT PENDING]
+  </text>
+  
+  <!-- Main title -->
+  <text x="80" y="180" fill="#ffffff" font-family="'Courier New', monospace" font-size="68" font-weight="bold" letter-spacing="-2">
+    ARE YOU A
+  </text>
+  <text x="80" y="260" fill="#00ff41" font-family="'Courier New', monospace" font-size="68" font-weight="bold" letter-spacing="-2">
+    HIGH-FUNCTIONING
+  </text>
+  <text x="80" y="340" fill="#c5a059" font-family="'Courier New', monospace" font-size="68" font-weight="bold" letter-spacing="-2">
+    GHOST?
+  </text>
+  
+  <!-- University rivalry line -->
+  <line x1="80" y1="390" x2="1120" y2="390" stroke="#00ff41" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Stats comparison -->
+  <g>
+    <!-- Cornell -->
+    <text x="80" y="450" fill="#c5a059" font-family="'Courier New', monospace" font-size="32" font-weight="bold">
+      CORNELL: 61%
+    </text>
+    <text x="80" y="485" fill="#888888" font-family="'Courier New', monospace" font-size="18" letter-spacing="4">
+      [REFOCUS]
+    </text>
+    
+    <!-- Vassar -->
+    <text x="600" y="450" fill="#00ff41" font-family="'Courier New', monospace" font-size="32" font-weight="bold">
+      VASSAR: 81%
+    </text>
+    <text x="600" y="485" fill="#888888" font-family="'Courier New', monospace" font-size="18" letter-spacing="4">
+      [BUILDING]
+    </text>
+  </g>
+  
+  <!-- Call to action -->
+  <text x="80" y="560" fill="#666666" font-family="'Courier New', monospace" font-size="20" letter-spacing="3">
+    → INPUT YOUR IDENTITY TO VERIFY EXECUTIVE AURA MAGNITUDE
+  </text>
+  
+  <!-- Bottom branding -->
+  <text x="1040" y="610" fill="#00ff41" font-family="'Courier New', monospace" font-size="16" letter-spacing="2">
+    VECTOMIND
+  </text>
+  
+  <!-- Corner accent -->
+  <rect x="0" y="626" width="1200" height="4" fill="#00ff41"/>
+</svg>

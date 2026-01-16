@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vectomind OG Image Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #1a1a1a;
+      font-family: 'Courier New', monospace;
+      color: #00ff41;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    #canvas {
+      border: 2px solid #00ff41;
+      display: block;
+      margin: 20px 0;
+      background: #050505;
+    }
+    
+    button {
+      background: #00ff41;
+      color: #050505;
+      border: none;
+      padding: 15px 30px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      letter-spacing: 2px;
+    }
+    
+    button:hover {
+      background: #00cc33;
+    }
+    
+    .instructions {
+      margin-top: 30px;
+      padding: 20px;
+      background: #0a1628;
+      border-left: 4px solid #00ff41;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    
+    .instructions code {
+      background: #050505;
+      padding: 2px 8px;
+      color: #00ff41;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>[VECTOMIND OG IMAGE GENERATOR]</h1>
+    
+    <canvas id="canvas" width="1200" height="630"></canvas>
+    
+    <button id="downloadBtn">DOWNLOAD PNG (1200x630)</button>
+    
+    <div class="instructions">
+      <h2 style="margin-top: 0; color: #00ff41;">DEPLOYMENT INSTRUCTIONS:</h2>
+      <ol>
+        <li>Click the button above to download <code>aura-og.png</code></li>
+        <li>Move the file to: <code>/public/aura-og.png</code> in your project</li>
+        <li>Update <code>index.html</code> lines 17 & 26: Change <code>.svg</code> to <code>.png</code></li>
+        <li>Run:
+          <pre style="background: #050505; padding: 10px; margin: 10px 0; overflow-x: auto;">git add public/aura-og.png index.html
+git commit -m "fix: Add PNG OG image for Discord compatibility"
+git push origin main</pre>
+        </li>
+        <li>Wait 60 seconds for Vercel to deploy</li>
+        <li>Test Discord preview at: <code>vectomind.vercel.app/aura</code></li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Draw the OG image
+    function drawOGImage() {
+      // Background
+      ctx.fillStyle = '#050505';
+      ctx.fillRect(0, 0, 1200, 630);
+      
+      // Grid overlay (subtle)
+      ctx.strokeStyle = '#00ff41';
+      ctx.globalAlpha = 0.08;
+      ctx.lineWidth = 1;
+      
+      // Horizontal lines
+      for (let i = 1; i < 4; i++) {
+        ctx.beginPath();
+        ctx.moveTo(0, i * 157.5);
+        ctx.lineTo(1200, i * 157.5);
+        ctx.stroke();
+      }
+      
+      // Vertical lines
+      for (let i = 1; i < 4; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * 300, 0);
+        ctx.lineTo(i * 300, 630);
+        ctx.stroke();
+      }
+      
+      ctx.globalAlpha = 1;
+      
+      // Top border accent
+      ctx.fillStyle = '#00ff41';
+      ctx.fillRect(0, 0, 1200, 4);
+      
+      // Classification header
+      ctx.fillStyle = '#00ff41';
+      ctx.font = 'bold 22px "Courier New", monospace';
+      ctx.letterSpacing = '8px';
+      ctx.fillText('[AUDIT PENDING]', 80, 100);
+      
+      // Main title - "ARE YOU A"
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 68px "Courier New", monospace';
+      ctx.letterSpacing = '-2px';
+      ctx.fillText('ARE YOU A', 80, 180);
+      
+      // Main title - "HIGH-FUNCTIONING"
+      ctx.fillStyle = '#00ff41';
+      ctx.fillText('HIGH-FUNCTIONING', 80, 260);
+      
+      // Main title - "GHOST?"
+      ctx.fillStyle = '#c5a059';
+      ctx.fillText('GHOST?', 80, 340);
+      
+      // University rivalry separator line
+      ctx.strokeStyle = '#00ff41';
+      ctx.globalAlpha = 0.3;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(80, 390);
+      ctx.lineTo(1120, 390);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      
+      // Yale stats (RED = failing)
+      ctx.fillStyle = '#ff0033';
+      ctx.font = 'bold 32px "Courier New", monospace';
+      ctx.fillText('YALE: 40%', 80, 450);
+      
+      ctx.fillStyle = '#888888';
+      ctx.font = '18px "Courier New", monospace';
+      ctx.letterSpacing = '4px';
+      ctx.fillText('[DISTRACTED]', 80, 485);
+      
+      // UConn stats (GREEN = winning)
+      ctx.fillStyle = '#00ff41';
+      ctx.font = 'bold 32px "Courier New", monospace';
+      ctx.letterSpacing = '0px';
+      ctx.fillText('UCONN: 90%', 600, 450);
+      
+      ctx.fillStyle = '#888888';
+      ctx.font = '18px "Courier New", monospace';
+      ctx.letterSpacing = '4px';
+      ctx.fillText('[IMMUNE]', 600, 485);
+      
+      // Call to action
+      ctx.fillStyle = '#666666';
+      ctx.font = '20px "Courier New", monospace';
+      ctx.letterSpacing = '3px';
+      ctx.fillText('→ INPUT YOUR IDENTITY TO VERIFY EXECUTIVE AURA MAGNITUDE', 80, 560);
+      
+      // Bottom branding
+      ctx.fillStyle = '#00ff41';
+      ctx.font = '16px "Courier New", monospace';
+      ctx.letterSpacing = '2px';
+      ctx.fillText('VECTOMIND', 1040, 610);
+      
+      // Bottom border accent
+      ctx.fillStyle = '#00ff41';
+      ctx.fillRect(0, 626, 1200, 4);
+    }
+    
+    // Draw on load
+    drawOGImage();
+    
+    // Download functionality
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'aura-og.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        alert('✅ DOWNLOAD COMPLETE\n\nNext steps:\n1. Move aura-og.png to /public/\n2. Update index.html (.svg → .png)\n3. Git commit + push');
+      }, 'image/png');
+    });
+  </script>
+</body>
+</html>
